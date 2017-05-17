@@ -1,0 +1,6 @@
+FROM demoregistry.dataman-inc.com/library/calico-node:1.2.1 
+MAINTAINER pro zpang@dataman-inc.com
+
+# time 
+RUN apk add --update tzdata && rm -rf /var/cache/apk/*
+RUN cp /usr/share/zoneinfo/Hongkong /etc/localtime
